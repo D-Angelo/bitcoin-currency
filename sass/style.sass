@@ -1,0 +1,163 @@
+body
+  background: #0f1e27
+  font-family: "Roboto", sans-serif
+  font-size: 0.875rem
+  font-weight: 700
+  color: #fff
+form
+  width: 100%
+  max-width: 985px
+  background: url("../img/form-bg.png") no-repeat top left
+  margin: 0 auto
+  padding: 70px 10px
+*
+  box-sizing: border-box
+.settings
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  border-radius: 10px
+  border: 1px solid rgba(146, 232, 254, 0.1)
+  padding: 1.375rem
+  option
+    border: 1px solid rgba(146, 232, 254, 0.1)
+  &__label
+    display: flex
+    font-size: 2rem
+    font-weight: 500
+    padding-right: 136px
+#currency
+  display: flex
+  font-size: 1rem
+  font-weight: 300
+  background: #0f1e27
+  border-radius: 5px
+  border: 1px solid #92e8fe
+  color: #fff
+  padding: 1.3125rem 1.06rem
+  width: 30%
+
+.coins
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+
+.coins-item
+  max-width: 310px
+  width: 100%
+  padding: 0 30px 20px
+  border-radius: 10px
+  margin-top: 30px
+  overflow-x: hidden
+  &__name
+    position: relative
+    height: 210px
+    text-align: center
+    font-size: 1.375rem
+    padding-top: 20px
+    z-index: 2
+    img
+     position: absolute
+     top: 0
+     left: 30px
+     z-index: 1
+     max-width: 100%
+  &__descr
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__descr div
+    width: 50%
+  &__statvalue,
+  &__percent
+    text-align: right
+  &__statname
+    opacity: 0.2
+  &__statvalue
+     color: #70c446
+     font-size: 1rem
+  .price
+    opacity: 1
+    color: #ffff
+    font-size: 1.25rem
+    padding-bottom: 15px
+  .switcher
+     position: relative
+     width: 42px
+     height: 1rem
+     margin-bottom: 10px
+     box-shadow: inset 1px 3px 7px rgba(27, 36, 40, 0.56)
+     border-radius: 8px
+     background-color: #3eb5f1
+  .switcher:after
+     position: absolute
+     content: ''
+     display: block
+     left: 0
+     width: 20px
+     height: 20px
+     border-radius: 50%
+     background-color: #ffffff
+.coins-item__percent
+  display: none
+.coins-item__percent:checked + .switcher
+  box-shadow: inset 1px 3px 7px rgba(27, 36, 40, 0.56)
+  border-radius: 8px
+  background-color: #c4c4c4
+.coins-item__percent:checked + .switcher:after
+  left: auto
+  right: 0
+
+
+.clearfix:after
+  content: ""
+  display: block
+  clear: both
+
+#BTC
+  background: url(../img/bitcoin-bg.jpg) no-repeat
+  background-size: cover
+  img
+    top: 20%
+
+#LTC
+  background: url(../img/litecoin-bg.jpg) no-repeat
+  background-size: cover
+  img
+      top: 20%
+#ETH
+  background: url(../img/etherum-bg.jpg) no-repeat
+  background-size: cover
+
+
+@media  (max-width: 991px)
+  .coins
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+  .settings
+    justify-content: space-between
+    &__label
+      padding: 3%
+@media  (max-width: 480px)
+  .settings
+    flex-direction: column
+    &__label
+      text-align: center
+  #currency
+    width: 80%
+    margin-top: 30px
+  .coins-item
+    padding: 0 15px 15px
+    max-width: 280px
+
+
+
+
+
+
+
+
+
+
+

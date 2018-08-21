@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Currency calculator</title>
+</head>
+<body>
+
+        <form>
+            <div class="settings">
+                <h1 class="settings__label">Select currency to exhange: </h1>
+                <select name="currency" id="currency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="RUB">RUB</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+
+        <div class="coins">
+            <div class="coins-item" ID="ETH">
+                <div class="coins-item__name">Ethereum
+                    <img src="img/ethereum-img.png" alt="" class="coins-item__image">
+                </div>
+
+
+                <div class="coins-item__descr">
+                    <div class="coins-item__statname price">Price: </div><div class="coins-item__statvalue price">$22 526.92</div>
+                    <div class="coins-item__percentlabel">Percent change</div>
+
+                        <input type="checkbox" checked class="coins-item__percent">
+                        <div class="switcher"></div>
+
+                    <div class="coins-item__statname">Hour change: </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Day change </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Week change </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Month change</div><div class="coins-item__statvalue">$22 526.92</div>
+                </div>
+
+            </div>
+            <div class="coins-item" id="LTC">
+                <div class="coins-item__name">Litecoin
+                    <img src="img/litecoin-image.png" alt="" class="coins-item__image">
+                </div>
+                <div class="coins-item__descr">
+                    <div class="coins-item__statname price">Price: </div><div class="coins-item__statvalue price">$22 526.92</div>
+                    <div class="coins-item__percentlabel">Percent change</div>
+                        <input type="checkbox"  checked class="coins-item__percent">
+                        <div class="switcher"></div>
+
+                    <div class="coins-item__statname">Hour change: </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Day change </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Week change </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Month change</div><div class="coins-item__statvalue">$22 526.92</div>
+                </div>
+
+            </div>
+            <div class="coins-item clearfix" id="BTC">
+                <div class="coins-item__name">Bitcoin
+                    <img src="img/bitcoin-img.png" alt="" class="coins-item__image">
+                </div>
+
+                <div class="coins-item__descr">
+                    <div class="coins-item__statname price">Price: </div><div class="coins-item__statvalue price">$22 526.92</div>
+                    <div class="coins-item__percentlabel">Percent change</div>
+                        <input type="checkbox" class="coins-item__percent">
+                        <div class="switcher"></div>
+                    <div class="coins-item__statname">Hour change: </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Day change </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Week change </div><div class="coins-item__statvalue">$22 526.92</div>
+                    <div class="coins-item__statname">Month change</div><div class="coins-item__statvalue">$22 526.92</div>
+                </div>
+
+            </div>
+        </div>
+        </form>
+        <script src="js/main.js"></script>
+</body>
+</html>

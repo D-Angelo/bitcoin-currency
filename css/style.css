@@ -1,0 +1,246 @@
+body {
+  font: 700 0.875rem "Roboto", sans-serif;
+  background: #0f1e27;
+  color: #fff;
+}
+
+form {
+  width: 100%;
+  max-width: 985px;
+  background: url("../img/form-bg.png") no-repeat top left;
+  margin: 0 auto;
+  padding: 70px 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(146, 232, 254, 0.1);
+  padding: 1.375rem;
+}
+
+.settings option {
+  border: 1px solid rgba(146, 232, 254, 0.1);
+}
+
+.settings__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-right: 136px;
+}
+
+#currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  background: #0f1e27;
+  border-radius: 5px;
+  border: 1px solid #92e8fe;
+  color: #fff;
+  padding: 1.3125rem 1.06rem;
+  width: 30%;
+}
+
+.coins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.coins-item {
+  max-width: 310px;
+  width: 100%;
+  padding: 0 30px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  overflow-x: hidden;
+}
+
+.coins-item__name {
+  position: relative;
+  height: 210px;
+  text-align: center;
+  font-size: 1.375rem;
+  padding-top: 20px;
+  z-index: 2;
+}
+
+.coins-item__name img {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.coins-item__descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.coins-item__descr div {
+  width: 50%;
+}
+
+.coins-item__statvalue,
+.coins-item__percent {
+  text-align: right;
+}
+
+.coins-item__statname {
+  opacity: 0.2;
+}
+
+.coins-item__statvalue {
+  color: #70c446;
+  font-size: 1rem;
+}
+
+.coins-item .price {
+  opacity: 1;
+  color: #ffff;
+  font-size: 1.25rem;
+  padding-bottom: 15px;
+}
+
+.coins-item .switcher {
+  background: #3eb5f1;
+  position: relative;
+  width: 42px;
+  height: 1rem;
+  margin-bottom: 10px;
+  -webkit-box-shadow: inset 1px 3px 7px rgba(27, 36, 40, 0.56);
+  box-shadow: inset 1px 3px 7px rgba(27, 36, 40, 0.56);
+  border-radius: 8px;
+}
+
+.coins-item .switcher:after {
+  background: #ffffff;
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.coins-item__percent {
+  display: none;
+}
+
+.coins-item__percent:checked + .switcher {
+  background: #c4c4c4;
+  -webkit-box-shadow: inset 1px 3px 7px rgba(27, 36, 40, 0.56);
+  box-shadow: inset 1px 3px 7px rgba(27, 36, 40, 0.56);
+  border-radius: 8px;
+}
+
+.coins-item__percent:checked + .switcher:after {
+  left: auto;
+  right: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#BTC {
+  background: url("../img/bitcoin-bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+#BTC img {
+  top: 20%;
+}
+
+#LTC {
+  background: url("../img/litecoin-bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+#LTC img {
+  top: 20%;
+}
+
+#ETH {
+  background: url("../img/etherum-bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .coins {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .settings {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .settings__label {
+    padding: 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .settings__label {
+    text-align: center;
+  }
+
+  #currency {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .coins-item {
+    padding: 0 15px 15px;
+    max-width: 280px;
+  }
+}
